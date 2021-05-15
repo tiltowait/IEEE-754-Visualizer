@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window title="Floating Point Simulator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="21" userLabel="Window">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="IEEE-754 Visualizer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="21" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="48" y="574" width="937" height="114"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <value key="minSize" type="size" width="937" height="114"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="937" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" id="207">
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="207">
                         <rect key="frame" x="20" y="61" width="897" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -226,19 +226,19 @@
                             <action selector="toggleBinary:" target="313" id="317"/>
                         </connections>
                     </matrix>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="312">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="312">
                         <rect key="frame" x="254" y="20" width="274" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="right" title="0" bezelStyle="round" id="355">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
                             <action selector="floatToBinary:" target="313" id="340"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="319">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="319">
                         <rect key="frame" x="530" y="14" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="356">
@@ -252,7 +252,7 @@ Gw
                             <action selector="reset:" target="313" id="320"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" id="321">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="321">
                         <rect key="frame" x="608" y="14" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Invert" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="357">
@@ -264,7 +264,7 @@ Gw
                             <action selector="invert:" target="313" id="322"/>
                         </connections>
                     </button>
-                    <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" id="324">
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="324">
                         <rect key="frame" x="20" y="15" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -303,7 +303,7 @@ Gw
                             <action selector="presets:" target="313" id="333"/>
                         </connections>
                     </matrix>
-                    <matrix verticalHuggingPriority="750" mode="highlight" allowsEmptySelection="NO" id="334">
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" mode="highlight" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="334">
                         <rect key="frame" x="693" y="15" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -346,7 +346,7 @@ Gw
                             <action selector="presets:" target="313" id="339"/>
                         </connections>
                     </matrix>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" imageHugsTitle="YES" id="341">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="341">
                         <rect key="frame" x="867" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="R" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="358">
@@ -358,7 +358,7 @@ Gw
                             <action selector="randomBits:" target="313" id="342"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" imageHugsTitle="YES" id="344">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="344">
                         <rect key="frame" x="819" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="h" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="359">
@@ -370,7 +370,7 @@ Gw
                             <action selector="shiftLeft:" target="313" id="345"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" imageHugsTitle="YES" id="346">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="346">
                         <rect key="frame" x="770" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="l" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="360">
@@ -382,7 +382,7 @@ Gw
                             <action selector="shiftRight:" target="313" id="347"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" imageHugsTitle="YES" id="348">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="348">
                         <rect key="frame" x="721" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="n" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="361">
@@ -394,7 +394,7 @@ Gw
                             <action selector="negate:" target="313" id="349"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="99" imageHugsTitle="YES" id="350">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="99" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="350">
                         <rect key="frame" x="671" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="+" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" tag="99" transparent="YES" id="362">
@@ -406,7 +406,7 @@ Gw
                             <action selector="addOrSubtract:" target="313" id="351"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="100" imageHugsTitle="YES" id="352">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="100" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="352">
                         <rect key="frame" x="620" y="-28" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="round" title="-" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" tag="100" transparent="YES" id="363">
@@ -418,7 +418,7 @@ Gw
                             <action selector="addOrSubtract:" target="313" id="353"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="97" imageHugsTitle="YES" id="367">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="97" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="367">
                         <rect key="frame" x="601" y="-15" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="round" title="M" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="368">
@@ -431,7 +431,7 @@ Gw
                             <action selector="doubleOrHalve:" target="313" id="372"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="98" imageHugsTitle="YES" id="369">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="98" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="369">
                         <rect key="frame" x="558" y="-15" width="39" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="round" title="D" bezelStyle="circular" imagePosition="above" alignment="center" borderStyle="border" transparent="YES" id="370">
@@ -448,13 +448,14 @@ Gw
             <connections>
                 <outlet property="initialFirstResponder" destination="-2" id="343"/>
             </connections>
+            <point key="canvasLocation" x="14" y="111"/>
         </window>
         <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
-                <menuItem title="Floating Point Simulator" id="56">
-                    <menu key="submenu" title="Floating Point Simulator" systemMenu="apple" id="57">
+                <menuItem title="IEEE-754 Visualizering Point Simulator" id="56">
+                    <menu key="submenu" title="IEEE-754 Visualizering Point Simulator" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About Floating Point Simulator" id="58">
+                            <menuItem title="About IEEE-754 Visualizering Point Simulator" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -473,7 +474,7 @@ Gw
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Hide Floating Point Simulator" keyEquivalent="h" id="134">
+                            <menuItem title="Hide IEEE-754 Visualizering Point Simulator" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-2" id="152"/>
                                 </connections>
@@ -492,7 +493,7 @@ Gw
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit ISO Floating Point Simulator" keyEquivalent="q" id="136">
+                            <menuItem title="Quit ISO IEEE-754 Visualizering Point Simulator" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-2" id="139"/>
                                 </connections>
@@ -677,7 +678,7 @@ Gw
                 <menuItem title="Help" id="103">
                     <menu key="submenu" title="Help" id="106">
                         <items>
-                            <menuItem title="Floating Point Simulator Help" keyEquivalent="?" id="111">
+                            <menuItem title="IEEE-754 Visualizering Point Simulator Help" keyEquivalent="?" id="111">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="122"/>
                                 </connections>

@@ -60,7 +60,7 @@
 			bit[0] = 1;
 			cell = [binaryMatrix cellWithTag:0];
 			[cell setTitle:@"1"];
-			[cell setState:NSOnState];
+      [cell setState:NSControlStateValueOn];
 		}
 		
 		if(temp >= 2)
@@ -95,7 +95,7 @@
 				e -= temp;
 				cell = [binaryMatrix cellWithTag:n];
 				[cell setTitle:@"1"];
-				[cell setState:NSOnState];
+        [cell setState:NSControlStateValueOn];
 			}
 			temp /= 2;
 		}
@@ -111,7 +111,7 @@
 				f -= temp;
 				cell = [binaryMatrix cellWithTag:n];
 				[cell setTitle:@"1"];
-				[cell setState:NSOnState];
+        [cell setState:NSControlStateValueOn];
 			}
 			temp /= 2;
 		}
@@ -129,7 +129,7 @@
 	{
 		cell = [binaryMatrix cellWithTag:n];
 		[cell setTitle:@"0"];
-		[cell setState:NSOffState];
+    [cell setState:NSControlStateValueOff];
 		bit[n] = 0;
 	}
 	[decimalField setStringValue:@"0"];
@@ -276,7 +276,7 @@
 		{
 			cell = [binaryMatrix cellWithTag:n];
 			[cell setTitle:@"1"];
-			[cell setState:NSOnState];
+      [cell setState:NSControlStateValueOn];
 		}
 	}
 	
@@ -302,13 +302,13 @@
 		{
 			[cell setTitle:@"1"];
 			bit[n] = 1;
-			[cell setState:NSOnState];
+      [cell setState:NSControlStateValueOn];
 		}
 		else
 		{
 			[cell setTitle:@"0"];
 			bit[n] = 0;
-			[cell setState:NSOffState];
+      [cell setState:NSControlStateValueOff];
 		}
 	}
 	
@@ -328,7 +328,7 @@
 		{
 			cell = [binaryMatrix cellWithTag:n];
 			[cell setTitle:@"1"];
-			[cell setState:NSOnState];
+      [cell setState:NSControlStateValueOn];
 			bit[n] = 1;
 		}
 	}
@@ -354,7 +354,7 @@
 	
 	cellc = [binaryMatrix cellWithTag:31];
 	[cellc setTitle:@"0"];
-	[cellc setState:NSOffState];
+  [cellc setState:NSControlStateValueOff];
 	
 	bit[31] = 0;
 	
@@ -379,7 +379,7 @@
 	
 	cellc = [binaryMatrix cellWithTag:0];
 	[cellc setTitle:@"0"];
-	[cellc setState:NSOffState];
+  [cellc setState:NSControlStateValueOff];
 	
 	bit[0] = 0;
 	
@@ -397,7 +397,7 @@
 	
 	bit[0] = newVal;
 	[cell setTitle:(newVal ? @"1" : @"0")];
-	[cell setState:(newVal ? NSOnState : NSOffState)];
+  [cell setState:(newVal ? NSControlStateValueOn : NSControlStateValueOff)];
 	
 	[self convertFromBinary];
 }

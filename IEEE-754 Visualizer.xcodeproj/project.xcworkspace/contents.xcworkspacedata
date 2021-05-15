@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/tiltowait/Programming/Float/IEEE-754 Visualizer.xcodeproj">
    </FileRef>
 </Workspace>
