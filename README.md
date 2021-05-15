@@ -1,0 +1,2 @@
+# IEEE-754 Floating Point Visualizer
+An educational utility for visualizing single-precision [IEEE-754](https://en.wikipedia.org/wiki/IEEE_754) floating-point numbers. It allows the user to toggle individual bits and see the resulting floating-point number, type in a floating-point number and see the bits, and toggle between several preset numbers. It also provides bit inversion and bitwise shift operations.
